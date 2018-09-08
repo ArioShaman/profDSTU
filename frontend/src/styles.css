@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+
+@font-face{
+  src: url('/assets/fonts/Strong-Regular.ttf');
+  font-family: 'strong-reg';
+}
+
+@font-face{
+  src: url('/assets/fonts/Philosopher-Regular.ttf');
+  font-family: 'philosopher-reg';
+}
+
+@font-face{
+  src: url('/assets/fonts/PoiretOne-Regular.ttf');
+  font-family: 'poiretone-reg';
+}
+body{
+  padding: 0px;
+  margin: 0px;
+}
