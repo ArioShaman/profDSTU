@@ -1,0 +1,149 @@
+$skeleton-grey: #9C9C9C
+$sky-color: #0E2C49
+.sky
+  position: absolute 
+  height: 100%
+  width: 100%
+  top: 0px
+  background-color: $sky-color
+  background-size: cover
+  .blink
+    height: 100%
+    width: 100%
+    position: relative
+    background: url('/assets/images/blink.png')
+    background-size: cover
+    .rings
+      position: relative
+      width: 1200px
+      height: 400px
+      background-color: #ececec
+      margin: 0px auto
+      top: calc((100% - 300px)/2)
+      background: url('/assets/images/rings.svg')
+      background-size: 100%
+      background-repeat: no-repeat
+      .main-planet
+        height: 210px
+        width: 210px
+        margin: 0px auto
+        position: relative
+        background: url('/assets/images/main-logo.png')
+        background-size: 100%
+        background-repeat: no-repeat
+  .wave
+    background-color: #ececec
+    top: 0px
+    position: absolute
+    height: 125px
+    width: 100%
+    background: url('/assets/images/wave.png')
+    background-size: 100%
+    background-repeat: no-repeat
+    top: calc(100% - 95px)
+.content
+  position: absolute
+  top: 100%
+  height: auto
+  width: 100%
+  .big-title
+    height: 45px
+    width: 100%
+    .line
+      height: 2px
+      width: 100%
+      position: absolute
+      background-color: grey
+      margin-top: 31px
+    .title-text
+      margin-left: -30px
+      position: relative
+      font-size: 2.5em
+      height: 45px
+      width: 240px
+      text-align: center
+      font-family: 'philosopher-reg'
+      background-color: white
+
+
+.width-container
+  position: relative
+  height: auto
+  width: 920px
+  margin: 0px auto
+  margin-bottom: 50px
+  .disable
+    opacity: 0 !important
+    transition: 0.5s
+    position: absolute !important
+    animation: disable
+    animation-duration: 0.5s
+  .news
+    opacity: 1
+    height: auto
+    width: 100%
+    position: relative
+    // top: 40px
+    // margin-top: 40px
+    display: flex
+    flex-direction: row
+    flex-wrap: nowrap
+    justify-content: space-between
+    transition: 0.5s
+    .column
+      height: auto
+    .left-column
+      width: 570px
+    .right-column
+      width: 310px
+      // margin-left: 38px
+    .real-new
+      transition: 1.5s
+      margin-top: 38px
+      animation: newsAnim
+      animation-delay: 0.5s
+      animation-duration: 1.5s
+      animation-fill-mode: backwards      
+      position: relative
+      // clip-path: inset(0px 0px)
+      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%) !important
+      .news-title
+        position: absolute
+        height: auto
+        width: 70%
+        padding-bottom: 15px
+        padding-left: 15px
+        color: white !important
+        font-family: 'strong-reg'
+        bottom: 4px
+        z-index: 100
+      .news-cont
+        z-index: 10
+        &:hover
+          filter: blur(10px)
+          .fakeImg
+            background-size: 200%
+      img
+        opacity: 0
+        height: auto
+        width: 100%
+      .fakeImg
+        background-position: center
+        transition: 0.5s
+        position: absolute
+        top: 0
+        height: 100%
+        width: 100%
+        background-size: 100%
+        background-repeat: no-repeat
+        background-color: rgba(0,0,0,0.2)
+    .fakeNew
+      margin-top: 38px
+      width: 100%
+      background-color: $skeleton-grey
+
+@keyframes newsAnim
+  0%
+    clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%);
+  100%
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);

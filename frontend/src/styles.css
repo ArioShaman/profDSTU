@@ -14,7 +14,14 @@
   src: url('/assets/fonts/PoiretOne-Regular.ttf');
   font-family: 'poiretone-reg';
 }
+
+@font-face{
+  src: url('/assets/fonts/GothicA1-Regular.ttf');
+  font-family: 'gothica';
+}
+
 body{
   padding: 0px;
   margin: 0px;
+  overflow-x: hidden;
 }

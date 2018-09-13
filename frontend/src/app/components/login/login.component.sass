@@ -1,0 +1,67 @@
+$sky-color: #0E2C49
+
+.sky
+  background-color: $sky-color
+  height: 100%
+  width: 100%
+  position: absolute
+  .form-body
+    min-height: 400px
+    width: 400px
+    background-color: white
+    position: relative
+    margin: 0px auto
+    margin-top: calc((100% - 400px)/7)
+    .title
+      position: relative
+      text-align: center
+      padding-top: 20px
+      font-family: 'gothica'
+      font-weight: 600
+    form
+      width: 300px
+      height: auto
+      margin: 0 auto
+      .form-group
+        position: relative
+        height: 60px
+        width: 100%
+        margin-top: 20px
+        margin-bottom: 20px
+        label
+          font-family: 'gothica'
+          font-weight: 800
+        input
+          font-family: 'gothica'          
+          padding-left: 10px
+          height: 25px
+          margin-top: 10px
+          width: 99%
+          background-color: white
+          border: 0px solid black
+          border-bottom: 2px solid $sky-color
+          &:focus
+            outline: none !important
+      .submit
+        background-color: $sky-color
+        color: white
+        text-align: center
+        font-size: 23px
+        padding-top: 7px
+        cursor: pointer
+        font-family: 'gothica'
+        box-sizing: border-box  
+        width: 175px
+        height: 40px
+        margin-left: calc((300px - 175px)/2)
+        margin-top: 110px
+        transition: 0.5s
+        border: none
+        &:hover
+          transform: scale(1.1, 1.1)
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active 
+    transition: background-color 5000s ease-in-out 0s
