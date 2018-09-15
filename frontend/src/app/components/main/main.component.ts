@@ -67,6 +67,7 @@ export class MainComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
     setTimeout(()=>{
       this.news = this.testNews;
       this.loaded = true;

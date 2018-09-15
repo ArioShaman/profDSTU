@@ -26,7 +26,6 @@ export class ShareBarService {
   public change(){
     this.cache.set('open', !this.open);
     this.open = !this.open;
-    console.log(this.open);
     this.openChange.next(this.open);
   }
 }

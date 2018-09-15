@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
   public authUser = new AuthUser('', '');
   constructor(
     public authService:AuthService,
-    private tokenAuthSerivce:Angular2TokenService,
+    public authTokenService:Angular2TokenService,
     private router: Router
   ) { 
   }
@@ -25,8 +25,7 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(){
-    this.authService.logInUser(this.authUser).subscribe(() => this.router.navigate(['/']));
+    this.authService.logInUser(this.authUser).subscribe(() => this.router.navigate(['/admin']));
 
   }
-
 }

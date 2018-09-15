@@ -1,3 +1,8 @@
 <div class="sidebar" [ngClass]="open ? 'open':''">
   <div class="burger" (click)="closeSidebar()"></div>
+
+  <div *ngIf="authTokenService.userSignedIn()" class="logout" (click)="logOut()">
+  	<dir class="icon"></dir>
+  	<div class="text">Log out</div>
+  </div>
 </div>

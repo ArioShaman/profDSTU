@@ -14,6 +14,7 @@ import {AuthService} from "./services/auth.service";
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import {ShareBarService} from "./services/share-bar.service";
 import { Ng2CacheModule } from 'ng2-cache';
+import { AdminPanelComponent } from './components/admin-panel/admin-panel.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { Ng2CacheModule } from 'ng2-cache';
     MainComponent,
     ArticleComponent,
     LoginComponent,
-    SidebarComponent
+    SidebarComponent,
+    AdminPanelComponent
   ],
   imports: [
     RouterModule,
