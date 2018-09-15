@@ -3,12 +3,13 @@ import {Angular2TokenService} from "angular2-token";
 import { Router } from '@angular/router';
 import {AuthService} from "../../services/auth.service";
 
+
 @Component({
-  selector: 'app-admin-panel',
-  templateUrl: './admin-panel.component.html',
-  styleUrls: ['./admin-panel.component.sass']
+  selector: 'app-create-article',
+  templateUrl: './create-article.component.html',
+  styleUrls: ['./create-article.component.sass']
 })
-export class AdminPanelComponent implements OnInit {
+export class CreateArticleComponent implements OnInit {
 
   constructor(
     public authService:AuthService,
@@ -19,6 +20,7 @@ export class AdminPanelComponent implements OnInit {
   ngOnInit() {
     if(!this.authTokenService.userSignedIn()){
         this.router.navigateByUrl('/');
-    }
+    }      
   }
+
 }
