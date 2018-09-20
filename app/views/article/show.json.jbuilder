@@ -1,0 +1,1 @@
+json.extract! @article, :id, :title, :cover, :html_text, :watches, :created_at

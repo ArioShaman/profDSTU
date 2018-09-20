@@ -1,3 +1,22 @@
-<p>
-  create-article works!
-</p>
+<navbar></navbar>
+<div class="body">
+    <form (ngSubmit)="create()">
+        <div class="line-group">
+            <div class="line-el">
+                <div class="label">Заголовок:</div>
+                <input type="text" name="title" [(ngModel)]="Article.title">
+            </div>
+            <div class="line-el">
+                <div class="label">Обложка:</div>
+                <div class="button download">
+                    <input type="file" name="cover" (change)="onFileChanged($event)">
+                </div>
+            </div>
+        </div>
+        <div class="editor1">
+            <ck-editor name="editor1" [(ngModel)]="Article.htmlText" skin="moono-lisa" language="ru" [fullPage]="false"></ck-editor>
+            
+            <button type="submit" class="submit">Создать</button>
+        </div>
+    </form>
+</div>

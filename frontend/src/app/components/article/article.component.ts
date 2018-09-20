@@ -1,4 +1,7 @@
 import { Component, OnInit, HostListener } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Angular2TokenService, AuthData, UserData } from "angular2-token";
+import { ApiService } from "../../services/api.service";
 
 @Component({
   selector: 'app-article',
@@ -8,12 +11,7 @@ import { Component, OnInit, HostListener } from '@angular/core';
 export class ArticleComponent implements OnInit {
 
 
-  public article = {
-      id: 1,
-      url: '/assets/images/test-images/test-02.png',
-      title: 'Открылся новый фонтан на площади Гагарина при ДГТУ',
-
-  }
+  public article;
   public scrolled = false;
 
   @HostListener('window:scroll', ['$event']) onScrollEvent($event){
@@ -25,10 +23,24 @@ export class ArticleComponent implements OnInit {
     }
   } 
 
-  constructor() { }
+  constructor(
+    public authTokenService:Angular2TokenService,
+    public acRoute : ActivatedRoute,
+    public api: ApiService,
+  ) { }
 
   ngOnInit() {
     window.scroll(0,0);
+    this.acRoute.params.subscribe((data : any)=>{
+      if(data && data.id){
+        this.api.get("article/"+data.id).subscribe(
+          res =>{
+            console.log(res);
+            this.article = res;
+          }
+       );
+      }
+    });
   }
 
 }

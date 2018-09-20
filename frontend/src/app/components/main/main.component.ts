@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from "../../services/api.service";
 
 @Component({
   selector: 'app-main',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  public testNews:Array<any> = [
+   public testNews:Array<any> = [
     {
       id: 1,
       url: '/assets/images/test-images/test-01.png',
@@ -61,17 +62,26 @@ export class MainComponent implements OnInit {
     },                    
   ];
   
-  public news:Array<any>;
+  public news;
   
   public loaded = false;
-  constructor() { }
 
-  ngOnInit() {
+  constructor(
+    public api: ApiService,
+  ) { }
+
+  ngOnInit() {    
+    this.api.get("article/").subscribe(
+      res =>{
+        // setTimeout(()=>{
+          console.log(res);
+          this.news = res;//this.testNews;
+          this.loaded = true;
+        // }, 1000);
+      }
+  );
+
     
-    setTimeout(()=>{
-      this.news = this.testNews;
-      this.loaded = true;
-    }, 1000);
 
   }
 

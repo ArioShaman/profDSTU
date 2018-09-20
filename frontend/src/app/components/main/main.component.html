@@ -55,9 +55,9 @@
           >
             <a [routerLink]="['/article', new.id]">
               <div class="news-cont">
-                <img [src]="new.url">
+                <img [src]="'http://localhost:3000' + new.cover.url">
                 <div class="fakeImg"
-                   [ngStyle]="{'background-image': 'url(' + new.url + ')'}"
+                   [ngStyle]="{'background-image': 'url(http://localhost:3000' + new.cover.url + ')'}"
                 ></div>
               </div>
               <div class="news-title">
@@ -74,9 +74,9 @@
         >
             <a [routerLink]="['/article', new.id]">
               <div class="news-cont">
-                <img [src]="new.url">
+                <img [src]="'http://localhost:3000' + new.cover.url">
                 <div class="fakeImg"
-                   [ngStyle]="{'background-image': 'url(' + new.url + ')'}"
+                   [ngStyle]="{'background-image': 'url(http://localhost:3000' + new.cover.url + ')'}"
                 ></div>                
               </div>
               <div class="news-title">
