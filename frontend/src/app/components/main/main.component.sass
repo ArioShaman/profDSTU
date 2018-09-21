@@ -23,14 +23,125 @@ $sky-color: #0E2C49
       background: url('/assets/images/rings.svg')
       background-size: 100%
       background-repeat: no-repeat
+      cursor: pointer
       .main-planet
         height: 210px
         width: 210px
         margin: 0px auto
         position: relative
-        background: url('/assets/images/main-logo.png')
+        background: url('/assets/images/main-logo.svg')
         background-size: 100%
         background-repeat: no-repeat
+        z-index: 1000
+      .planet
+        position: absolute
+        top: 0px
+        background-color: #7FAEFF
+        border-radius: 50%
+        transition: 0.3s
+        background-size: cover !important
+        background-repeat: no-repeat
+        &:hover
+          transform: scale(1.1, 1.1)
+      .text-group
+        .planet-text
+          top: 0px
+          position: absolute
+          color: white
+          font-family: 'poiretone-reg'
+      .planet-group-1
+      .planet-1-01
+        height: 64px
+        width: 64px
+        margin-left: 90px
+        margin-top: 10px 
+        background: url('/assets/images/icons/space/stip.svg')    
+      .planet-text-1-01
+        margin-left: 80px
+        margin-top: -10px 
+      .planet-text-1-02    
+        margin-left: 177px
+        margin-top: 125px
+      .planet-1-02
+        height: 50px
+        width: 50px
+        margin-left: 190px
+        margin-top: 145px
+        background: url('/assets/images/icons/space/rating.svg')        
+      .planet-group-2
+      .planet-text-2-01              
+        margin-left: 390px
+        margin-top: -10px
+      .planet-2-01
+        height: 34px
+        width: 34px
+        margin-left: 420px
+        margin-top: 10px
+        background: url('/assets/images/icons/space/events.svg')  
+      .planet-text-2-02
+        margin-left: 340px
+        margin-top: 135px
+      .planet-2-02
+        height: 45px
+        width: 45px
+        margin-left: 370px
+        margin-top: 155px
+        background: url('/assets/images/icons/space/diskont.svg')
+      .planet-text-2-03
+        margin-left: 755px
+        margin-top: 15px            
+      .planet-2-03
+        height: 45px
+        width: 45px
+        margin-left: 780px
+        margin-top: 35px
+        background: url('/assets/images/icons/space/money-back.svg')  
+      .planet-text-2-04
+        margin-left: 810px
+        margin-top: -30px 
+      .planet-2-04
+        height: 45px
+        width: 45px
+        margin-left: 850px
+        margin-top: -10px                    
+      .planet-group-3
+      .planet-text-3-01        
+        margin-left: 745px
+        margin-top: 125px
+      .planet-3-01
+        height: 54px
+        width: 54px
+        margin-left: 770px
+        margin-top: 145px
+        background: url('/assets/images/icons/space/law-environment.svg')  
+      .planet-text-3-02
+        margin-left: 960px
+        margin-top: 15px
+      .planet-3-02
+        height: 54px
+        width: 54px
+        margin-left: 970px
+        margin-top: 35px
+        background: url('/assets/images/icons/space/production.svg')   
+      .planet-text-3-03
+        margin-left: 1030px
+        margin-top: 125px
+      .planet-3-03
+        height: 64px
+        width: 64px
+        margin-left: 1080px
+        margin-top: 145px
+        background: url('/assets/images/icons/space/relax.svg')  
+      .planet-text-3-04
+        margin-left: 560px
+        margin-top: 185px  
+      .planet-3-04
+        height: 60px
+        width: 60px
+        margin-left: 570px
+        margin-top: 200px  
+        background: url('/assets/images/icons/space/stud-houses.svg')                          
+
   .wave
     background-color: #ececec
     top: 0px
